@@ -1,0 +1,70 @@
+apply plugin:  'com.android.application'
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.2"
+
+
+    defaultConfig {
+        applicationId "com.example.wb.myshoppingmall"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation project(':banner')
+    implementation project(':opendanmaku')
+    implementation project(':FlycoTabLayout_Lib')
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+    implementation 'com.zhy:magic-viewpager:1.0.1'
+    implementation 'de.gerdi-project:GSON:6.0.6'
+    implementation files('libs\\alipaySdk-20170922.jar')
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.tencent:mmkv:1.0.23'
+    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //配置okhttp3,为了使用OkHttpClient，OkHttpClient是用来完成android 客户端对服务端请求的工具。
+    implementation 'com.squareup.okhttp3:okhttp:3.0.1'
+    implementation 'com.zhy:okhttputils:2.6.2'
+
+    /**
+     * fastjson解析
+     * fastjson用于将Java Bean序列化为JSON字符串
+     * 也可以从JSON字符串反序列化到JavaBean
+     */
+    implementation 'com.alibaba:fastjson:1.1.54.android'
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    implementation 'com.jakewharton:butterknife-compiler:10.2.3'
+
+
+
+
+
+}

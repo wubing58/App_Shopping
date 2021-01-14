@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My shoppingMall</string>
+    <string name="输入搜索信息">输入搜索信息</string>
+    <string name="消息">消息</string>
+</resources>

@@ -1,0 +1,8 @@
+include ':alipay_demo'
+include ':AddSubView'
+include ':banner'
+include ':app'
+rootProject.name = "My shoppingMall"
+include ':tBViewer'
+include ':opendanmaku'
+include ':FlycoTabLayout_Lib'
